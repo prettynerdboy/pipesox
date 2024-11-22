@@ -6,7 +6,7 @@
 /*   By: anakin <anakin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 23:33:50 by anakin            #+#    #+#             */
-/*   Updated: 2024/11/20 19:25:54 by anakin           ###   ########.fr       */
+/*   Updated: 2024/11/22 20:22:14 by anakin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*make_path(char *cmd, char **envp)
 	i = 0;
 	if (!envp || !cmd)
         return (NULL);
-	if (cmd[0] == '/')
+	if (cmd[0] == '/') 
 			return (ft_strdup(cmd));
     while (envp[i] && ft_strncmp(envp[i], "PATH=", 5) != 0)
 		i++;
